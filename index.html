@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="js/rs.js"></script>
+    <script src="app.js"></script>
+    <script src="js/angular-typewrite.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/theme-core.css">
+    <!--<link rel="stylesheet" href="css/angular-typewrite.css">-->
+</head>
+<body ng-app="demoapp">
+<head>
+    <style>
+        .shell-input {
+            display: inline-block; width:500px; min-height:200px; background-color: #000000;margin:auto; padding:10px;font-size:28px;
+        }
+       /* .title {
+            padding-top:20px;display:inline-block;float:left;margin-bottom:5px;font-family: RobotoDraft, Roboto, 'Helvetica Neue', sans-serif;font-weight:300;color:blue;
+        }*/
+        .typed-overlay {
+            position:absolute;
+            top:40%;
+            left:30%;
+            z-index:1;
+        }
+
+    </style>
+</head>
+
+        <body ng-controller="mainCtrl" style="text-align: center;">
+        <div  class="content">
+            <video  id="player"  src="video/video-background.mp4"autoplay loop muted></video>
+            <div class="typed-overlay">
+               <span class="shell-input" style="text-align:center; min-height:200px;"><!--messages="sentences"-->
+        <type-writer   type-speed="100" loop=true  loop-delay="1000" custom-style=false cursor=true shell=false newline=true>Welcome, type-write your message here!</type-writer>
+      </span>
+            </div>
+
+    </div>
+
+        </body>
+<style>
+    .cursor{
+        color: #f0f0f0;
+        opacity: 1;
+        -webkit-animation: blink 0.7s infinite;
+        -moz-animation: blink 0.7s infinite;
+        animation: blink 0.7s infinite;
+    }
+
+    .shell {
+        color: #f0f0f0;
+        background:white;
+        height:300px;
+    }
+
+    @keyframes blink{
+        0% { opacity:1; }
+        50% { opacity:0; }
+        100% { opacity:1; }
+    }
+
+    @-webkit-keyframes blink{
+        0% { opacity:1; }
+        50% { opacity:0; }
+        100% { opacity:1; }
+    }
+
+    @-moz-keyframes blink{
+        0% { opacity:1; }
+        50% { opacity:0; }
+        100% { opacity:1; }
+    }
+    .content {
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .content video {
+        width: 100%;
+        display: block;
+    }
+    .content:before {
+        content: '';
+        position: absolute;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+</style>
+</body>
