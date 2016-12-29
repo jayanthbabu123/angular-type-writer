@@ -23,6 +23,7 @@
      * If fewer arguments are specified than necessary for interpolation, the extra
      * interpolation markers will be preserved in the final string.
      *
+     *
      * Since data will be parsed statically during a build step, some restrictions
      * are applied with respect to how minErr instances are created and called.
      * Instances should have names of the form namespaceMinErr for a minErr created

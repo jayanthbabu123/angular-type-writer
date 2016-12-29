@@ -15,6 +15,7 @@ angular.module("angular.typewriter", [])
             link: function(scope, element, attrs){
                 //console.log("Typewriter directive...");
 
+
                 scope.typeSpeed = scope.typeSpeed || 100;
                 scope.loopDelay = scope.loopDelay || 2000;
                 scope.customStyle = scope.customStyle || false;
